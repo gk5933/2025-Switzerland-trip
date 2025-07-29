@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瑞士13天精華觀光行程 (含維基連結)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glass-card {
+            background-color: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .day-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .day-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .day-card-content {
+            flex-grow: 1;
+        }
+        .map-container {
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .header-title {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .wiki-link {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px dotted #2563eb;
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            font-weight: 500;
+        }
+        .wiki-link:hover {
+            color: #1d4ed8;
+            border-bottom-style: solid;
+        }
+        details > summary {
+            cursor: pointer;
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .arrow {
+            transform: rotate(90deg);
+        }
+        .arrow {
+            transition: transform 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="glass-card shadow-lg sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="header-title text-3xl md:text-4xl font-bold text-center text-gray-900">瑞士13天精華觀光行程</h1>
+            <p class="text-center text-gray-700 mt-2 font-medium">一份包含詳細每日計畫、行李策略與住宿地圖的深度旅遊指南</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- 旅程總覽 -->
+        <section class="mb-10 p-6 rounded-xl shadow-lg glass-card">
+            <h2 class="text-2xl font-bold mb-4 text-blue-800">旅程總體特點</h2>
+            <div class="space-y-6">
+                 <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">策略性住宿</h3>
+                        <p class="text-gray-700">多晚住宿於策馬特(3晚)、韋沃(2晚)、因特拉肯(2晚)、烏爾多夫(3晚)，旨在減少頻繁更換住宿的麻煩，讓您有更多彈性應對瑞士多變的天氣，並深度探索各區域。</p>
+                    </div>
+                </div>
+                 <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-red-100 text-red-700 rounded-full flex items-center justify-center">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">SBB App</h3>
+                        <p class="text-gray-700">強烈建議下載並熟悉瑞士國鐵 SBB App。這是您在瑞士規劃交通、查詢時刻表、確認月台和購票的萬能工具。</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-green-100 text-green-700 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" /><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">車站對車站行李運送服務</h3>
+                        <p class="text-gray-700">本次行程能夠輕裝旅行的關鍵。旅客可在當日19:00前將行李交給出發地的火車站行李寄送櫃檯，行李會於2天後抵達目的地火車站。費用約CHF 12/件，限重23公斤。行李抵達後可免費寄存4天。</p>
+                    </div>
+                </div>
+                 <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-yellow-100 text-yellow-700 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">瑞士旅行通行證 (Swiss Travel Pass)</h3>
+                        <p class="text-gray-700">強烈建議購買瑞士旅行通行證或瑞士半價卡。這兩種全國性票券能為您的火車、市區交通、渡輪費用提供顯著折扣，甚至免費進入部分博物館。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 每日行程 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Day 1 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第1天 (9/16): 抵達蘇黎世-克洛滕安頓</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🛬 傍晚抵達:</strong> 班機抵達蘇黎世機場(ZRH)後，辦理入境手續。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 在機場火車站將大件行李寄送至策馬特(Zermatt)。</p>
+                    <p><strong class="text-blue-600">🏨 前往住宿:</strong> 前往位於克洛滕(Kloten)的住宿 (Hamelirainstrasse 5)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Hamelirainstrasse+5,+Kloten,+8302&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E8%98%87%E9%BB%8E%E4%B8%96" target="_blank" rel="noopener noreferrer" class="wiki-link">蘇黎世</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%85%8B%E6%B4%9B%E6%BB%95" target="_blank" rel="noopener noreferrer" class="wiki-link">克洛滕</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E8%98%87%E9%BB%8E%E4%B8%96%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" class="wiki-link">蘇黎世機場(ZRH)</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                    <button onclick="togglePlayback(this)" data-text="第一天，抵達蘇黎世。傍晚抵達機場後，請將大件行李寄送至策馬特。然後搭乘巴士前往克洛滕的住宿休息。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第2天 (9/17): 蘇黎世 - 庫爾 - 聖莫里茨</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🚂 上午:</strong> 從蘇黎世搭火車前往庫爾(Chur)。</p>
+                    <p><strong class="text-indigo-600">🏞️ 午後:</strong> 從庫爾搭乘普通列車，沿伯爾尼納線前往聖莫里茨。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 今日輕裝出行。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 聖莫里茨 (Via Somplaz 17)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Via+Somplaz+17,+St.+Moritz,+GR,+7500&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%BA%AB%E5%B0%94" target="_blank" rel="noopener noreferrer" class="wiki-link">庫爾</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%9C%A3%E8%8E%AB%E9%87%8C%E8%8C%A8" target="_blank" rel="noopener noreferrer" class="wiki-link">聖莫里茨</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E8%B4%9D%E5%B0%94%E5%B0%BC%E7%BA%B3%E9%93%81%E8%B7%AF" target="_blank" rel="noopener noreferrer" class="wiki-link">伯爾尼納線 (景觀列車)</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第二天，前往聖莫里茨。上午從蘇黎世搭火車到庫爾，再轉乘普通列車沿著伯爾尼納線欣賞風景。今晚住宿於聖莫里茨。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第3天 (9/18): 聖莫里茨 - 策馬特</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🚂 全日體驗:</strong> 乘坐著名的冰河快車，展開一場長達8小時橫跨瑞士阿爾卑斯山的史詩級列車之旅。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 抵達策馬特火車站時，領取您的大件行李。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 抵達無車小鎮策馬特(Matterstrasse 15)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Matterstrasse+15,+Zermatt,+Wallis+3920&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%86%B0%E5%B7%9D%E5%BF%AB%E8%BD%A6" target="_blank" rel="noopener noreferrer" class="wiki-link">冰河快車 (景觀列車)</a></li>
+                        <li><a href="https://zh.wikipedia.org/zh-tw/%E9%87%87%E5%B0%94%E9%A9%AC%E7%89%B9" target="_blank" rel="noopener noreferrer" class="wiki-link">策馬特</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第三天，冰河快車史詩之旅。今天將乘坐著名的冰河快車，享受長達八小時的阿爾卑斯山景觀。抵達策馬特後，記得領取您的大件行李。今晚夜宿於這個夢幻的無車小鎮。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第4天 (9/19): 策馬特 - 馬特宏峰</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">⛰️ 上午:</strong> 參加高納葛拉特半日遊，欣賞馬特宏峰。</p>
+                    <p><strong class="text-indigo-600">🏞️ 午後:</strong> 前往利菲爾湖捕捉經典倒影。</p>
+                    <p><strong class="text-yellow-600">🌅 日出(彈性):</strong> 可在清晨前往教堂橋欣賞馬特宏峰的黃金日出。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 將大件行李寄送至韋沃。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 策馬特 (Matterstrasse 15)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Matterstrasse+15,+Zermatt,+Wallis+3920&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E9%A9%AC%E7%89%B9%E6%B4%AA%E5%B3%B0" target="_blank" rel="noopener noreferrer" class="wiki-link">馬特宏峰</a></li>
+                        <li><a href="https://www.leo-travel.idv.tw/60873/swiss-zermatt-matterhorn-gornergrat" target="_blank" rel="noopener noreferrer" class="wiki-link">高納葛拉特半日遊</a></li>
+                        <li><a href="https://vocus.cc/article/66b45a7efd89780001010228" target="_blank" rel="noopener noreferrer" class="wiki-link">利菲爾湖</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第四天，近距離接觸馬特宏峰。上午參加高納葛拉特半日遊，欣賞壯麗山景。下午到利菲爾湖拍攝馬特宏峰的經典倒影。活動結束後，記得將大件行李寄往下一站韋沃。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第5天 (9/20): 策馬特自由探索</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🚶‍♂️ 全日選項一:</strong> 五湖健行(5-Seenweg)。</p>
+                    <p><strong class="text-indigo-600">🚠 全日選項二:</strong> 馬特宏峰冰川天堂與Furi吊橋健行。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 繼續享受輕裝旅行。</p>
+                    <p><strong class="text-yellow-600">🍽️ 餐飲推薦:</strong> 嘗試「Julen Restaurant」的黑面羊料理。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 策馬特 (Matterstrasse 15)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Matterstrasse+15,+Zermatt,+Wallis+3920&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://www.zermatt.ch/en/Media/Attractions/5-Lakes-Walk" target="_blank" rel="noopener noreferrer" class="wiki-link">五湖健行(5-Seenweg)</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%B0%8F%E9%A9%AC%E7%89%B9%E5%AE%8F%E5%B3%B0" target="_blank" rel="noopener noreferrer" class="wiki-link">馬特宏峰冰川天堂</a></li>
+                    </ul>
+                </details>
+                 <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第五天，策馬特自由日。您可以選擇挑戰五湖健行，或者搭乘纜車到冰川天堂體驗高山活動。晚上可以品嚐當地特色餐廳。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第6天 (9/21): 策馬特 - 蒙特勒 - 韋沃</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🚂 上午交通:</strong> 從策馬特搭乘火車前往蒙特勒。</p>
+                    <p><strong class="text-indigo-600">🏞️ 午後交通:</strong> 在蒙特勒換乘黃金山口快車前往韋沃。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 抵達韋沃後領取行李，並將大件行李寄送至因特拉肯。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 韋沃(Rue du Leman 6, Vevey 1800)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Rue+du+Leman+6,+Vevey+1800&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E8%92%99%E7%89%B9%E5%8B%92" target="_blank" rel="noopener noreferrer" class="wiki-link">蒙特勒</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E6%B2%83%E9%9F%8B" target="_blank" rel="noopener noreferrer" class="wiki-link">韋沃</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E9%87%91%E8%89%B2%E5%9B%B3%E6%A1%88%E5%BF%AB%E8%BB%8A" target="_blank" rel="noopener noreferrer" class="wiki-link">黃金山口快車 (景觀列車)</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第六天，前往日內瓦湖畔。上午從策馬特搭火車到蒙特勒，下午換乘黃金山口快車，欣賞湖光山色，抵達韋沃。記得在韋沃車站處理您的行李寄送。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第7天 (9/22): 韋沃 - 洛桑一日遊</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🏛️ 全日:</strong> 搭乘火車前往洛桑一日遊。</p>
+                    <p><strong class="text-indigo-600">🏞️ 景點建議:</strong> 參觀奧林匹克博物館與拉沃葡萄園梯田。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 輕裝一日遊。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 返回韋沃 (Rue du Leman 6)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Rue+du+Leman+6,+Vevey+1800&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E6%B4%9B%E6%A1%91" target="_blank" rel="noopener noreferrer" class="wiki-link">洛桑</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E5%8D%9A%E7%89%A9%E9%A6%86" target="_blank" rel="noopener noreferrer" class="wiki-link">奧林匹克博物館</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E6%8B%89%E6%B2%83%E8%91%A1%E8%90%84%E5%9B%AD%E6%A2%AF%E7%94%B0" target="_blank" rel="noopener noreferrer" class="wiki-link">拉沃葡萄園梯田</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第七天，洛桑一日遊。今天將輕裝搭乘火車前往洛桑，參觀奧林匹克博物館，並漫步於世界遺產拉沃葡萄園梯田。晚上返回韋沃住宿。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 8 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第8天 (9/23): 韋沃 - 因特拉肯</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🚂 上午交通:</strong> 再次搭乘黃金山口快車前往因特拉肯。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 抵達因特拉肯後領取行李，並將大件行李寄送至烏爾多夫。</p>
+                    <p><strong class="text-indigo-600">🏨 午後抵達:</strong> 抵達因特拉肯(Blumenstrasse 2)。</p>
+                    <p><strong class="text-yellow-600">🌃 晚間活動:</strong> 在因特拉肯自由活動。</p>
+                    <p><strong class="text-blue-600">🏨 夜宿:</strong> 因特拉肯 (Blumenstrasse 2)。</p>
+                    <div class="map-container">
+                       <iframe src="https://www.google.com/maps?q=Blumenstrasse+2,+Interlaken&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%9B%A0%E7%89%B9%E6%8B%89%E8%82%AF" target="_blank" rel="noopener noreferrer" class="wiki-link">因特拉肯</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第八天，前進冒險之都因特拉肯。上午再次體驗黃金山口快車，抵達後處理行李寄送事宜。晚上可以在因特拉肯小鎮自由漫步。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 9 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第9天 (9/24): 歐洲之巔少女峰一日遊</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">⛰️ 全日:</strong> 前往歐洲之巔少女峰(Jungfraujoch)。</p>
+                    <p><strong class="text-yellow-600">🍽️ 午餐建議:</strong> 在少女峰山頂的水晶餐廳用餐。</p>
+                    <p><strong class="text-indigo-600">🚶‍♂️ 午後健行:</strong> 走艾格之路到小夏戴克。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 輕裝一日遊。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 因特拉肯 (Blumenstrasse 2)。</p>
+                    <div class="map-container">
+                       <iframe src="https://www.google.com/maps?q=Blumenstrasse+2,+Interlaken&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%B0%91%E5%A5%B3%E5%B3%B0" target="_blank" rel="noopener noreferrer" class="wiki-link">少女峰</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%B0%8F%E5%A4%8F%E6%88%B4%E5%85%8B" target="_blank" rel="noopener noreferrer" class="wiki-link">小夏戴克</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第九天，登上歐洲之巔少女峰。今天將是行程的重頭戲，搭乘火車登上歐洲最高的火車站，欣賞壯觀的冰川景色。下山時可以體驗風景優美的艾格之路健行。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Day 10 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第10天 (9/25): 布里恩茨湖 - 琉森</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🏞️ 上午:</strong> 遊覽布里恩茨湖，參觀吉斯河瀑布。</p>
+                    <p><strong class="text-indigo-600">🚂 午後:</strong> 搭乘琉森-因特拉肯快車前往琉森。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 輕裝前往琉森。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 琉森 (建議老城區或火車站附近)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Lucerne+Station&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%B8%83%E9%87%8C%E6%81%A9%E8%8C%A8%E6%B9%96" target="_blank" rel="noopener noreferrer" class="wiki-link">布里恩茨湖</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%90%89%E6%96%AF%E5%B7%B4%E8%B5%AB%E7%80%91%E5%B8%83" target="_blank" rel="noopener noreferrer" class="wiki-link">吉斯河瀑布</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E7%90%89%E6%A3%AE" target="_blank" rel="noopener noreferrer" class="wiki-link">琉森</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E9%87%91%E8%89%B2%E5%9B%B3%E6%A1%88%E5%BF%AB%E8%BB%8A" target="_blank" rel="noopener noreferrer" class="wiki-link">琉森-因特拉肯快車 (景觀列車)</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第十天，湖光山色之旅。上午搭船遊覽布里恩茨湖，並探訪壯觀的吉斯河瀑布。下午搭乘景觀列車前往琉森。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 11 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第11天 (9/26): 琉森 - 烏爾多夫</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🏛️ 上午:</strong> 深度探索琉森老城區。</p>
+                    <p><strong class="text-indigo-600">🏛️ 午後:</strong> 參觀瑞士交通博物館或冰河花園。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 抵達烏爾多夫後領取大件行李。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 烏爾多夫 (Bahnhofstrasse 6a)。</p>
+                     <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Bahnhofstrasse+6a,+Urdorf,+Zurich+8902&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%8D%A1%E4%BD%A9%E5%B0%94%E5%BB%8A%E6%A1%A5" target="_blank" rel="noopener noreferrer" class="wiki-link">卡佩爾廊橋</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E7%8B%AE%E5%AD%90%E7%B4%80%E5%BF%B5%E7%A2%91" target="_blank" rel="noopener noreferrer" class="wiki-link">垂死獅子紀念碑</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E7%A9%86%E5%A1%9E%E6%A0%BC%E5%9F%8E%E5%A2%99" target="_blank" rel="noopener noreferrer" class="wiki-link">穆塞格城牆</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E7%91%9E%E5%A3%AB%E4%BA%A4%E9%80%9A%E5%8D%9A%E7%89%A9%E9%A6%86" target="_blank" rel="noopener noreferrer" class="wiki-link">瑞士交通博物館</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E5%86%B0%E6%B2%B3%E5%85%AC%E5%9B%AD_(%E5%8D%A2%E5%A1%9E%E6%81%A9)" target="_blank" rel="noopener noreferrer" class="wiki-link">冰河花園</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第十一天，琉森古城漫遊。上午深度探索琉森老城區的各大景點，下午可以選擇參觀博物館。傍晚前往蘇黎世近郊的烏爾多夫，並領取您的大件行李。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 12 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第12天 (9/27): 蘇黎世市區與玉特利山</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🏙️ 上午:</strong> 探索蘇黎世市區。</p>
+                    <p><strong class="text-indigo-600">⛰️ 午後:</strong> 前往玉特利山欣賞全景。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 行李留在住宿，輕鬆出遊。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 烏爾多夫 (Bahnhofstrasse 6a)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Bahnhofstrasse+6a,+Urdorf,+Zurich+8902&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://zh.wikipedia.org/wiki/%E7%8F%AD%E9%9C%8D%E5%A4%AB%E5%A4%A7%E8%A1%97" target="_blank" rel="noopener noreferrer" class="wiki-link">班霍夫大街</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E8%98%87%E9%BB%8E%E4%B8%96%E5%A4%A7%E6%95%99%E5%A0%82" target="_blank" rel="noopener noreferrer" class="wiki-link">蘇黎世大教堂</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E8%98%87%E9%BB%8E%E4%B8%96%E8%81%96%E6%AF%8D%E5%A4%A7%E6%95%99%E5%A0%82" target="_blank" rel="noopener noreferrer" class="wiki-link">蘇黎世聖母大教堂</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E6%9E%97%E7%99%BB%E9%9C%8D%E5%A4%AB%E5%B1%B1" target="_blank" rel="noopener noreferrer" class="wiki-link">林登霍夫山</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E7%8E%89%E7%89%B9%E5%88%A9%E5%B1%B1" target="_blank" rel="noopener noreferrer" class="wiki-link">玉特利山</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第十二天，探索蘇黎世。上午遊覽蘇黎世的市區景點，包括班霍夫大街和舊城區。下午登上玉特利山，將整個蘇黎世市區和湖景盡收眼底。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 13 -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">第13天 (9/28): 巧克力與萊茵瀑布</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🍫 上午:</strong> 參觀瑞士蓮巧克力之家。</p>
+                    <p><strong class="text-indigo-600">🏞️ 午後:</strong> 前往萊茵瀑布。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 行李留在住宿，輕鬆出遊。</p>
+                    <p><strong class="text-blue-600">🏨 晚間住宿:</strong> 烏爾多夫 (Bahnhofstrasse 6a)。</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Bahnhofstrasse+6a,+Urdorf,+Zurich+8902&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                 <details class="mt-4 pt-4 border-t border-gray-200/60">
+                    <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                        <span>每日景點詳細介紹</span>
+                        <span class="arrow transition-transform transform">▶</span>
+                    </summary>
+                    <ul class="mt-2 pl-4 list-disc space-y-1">
+                        <li><a href="https://www.lindt-home-of-chocolate.com/en/" target="_blank" rel="noopener noreferrer" class="wiki-link">瑞士蓮巧克力之家</a></li>
+                        <li><a href="https://zh.wikipedia.org/wiki/%E8%90%8A%E8%8C%B5%E7%80%91%E5%B8%83" target="_blank" rel="noopener noreferrer" class="wiki-link">萊茵瀑布</a></li>
+                    </ul>
+                </details>
+                <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="第十三天，甜蜜與壯闊之旅。上午沉浸在瑞士蓮巧克力之家的甜蜜世界，下午感受歐洲水量最大萊茵瀑布的磅礴氣勢。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Return -->
+            <div class="day-card glass-card p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">回程 (9/29): 蘇黎世出發</h3>
+                <div class="day-card-content space-y-4 text-gray-700">
+                    <p><strong class="text-indigo-600">🛫 上午:</strong> 從烏爾多夫前往蘇黎世機場(ZRH)，搭機返家。</p>
+                    <p><strong class="text-green-600">🧳 行李安排:</strong> 將所有行李從住宿攜帶至機場辦理登機。</p>
+                </div>
+                 <div class="mt-4 pt-4 border-t border-gray-200/60">
+                     <button onclick="togglePlayback(this)" data-text="旅程即將結束，今天將從烏爾多夫前往機場，帶著滿滿的回憶回家。祝您旅途平安。" class="audio-button w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4 0a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        <span class="button-text">播放每日語音導覽</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-6 mt-8 bg-gray-800/70">
+        <p class="text-white font-semibold">祝您有趟愉快的瑞士之旅！</p>
+    </footer>
+
+    <script>
+        let currentUtterance = null;
+        let currentlyPlayingButton = null;
+
+        function stopCurrentSpeech() {
+            if (speechSynthesis.speaking) {
+                speechSynthesis.cancel();
+            }
+            if (currentlyPlayingButton) {
+                const buttonText = currentlyPlayingButton.querySelector('.button-text');
+                const playIcon = currentlyPlayingButton.querySelector('.play-icon');
+                const stopIcon = currentlyPlayingButton.querySelector('.stop-icon');
+                
+                buttonText.textContent = '播放每日語音導覽';
+                playIcon.classList.remove('hidden');
+                stopIcon.classList.add('hidden');
+                currentlyPlayingButton = null;
+            }
+        }
+
+        function togglePlayback(button) {
+            const text = button.getAttribute('data-text');
+            const buttonText = button.querySelector('.button-text');
+            const playIcon = button.querySelector('.play-icon');
+            const stopIcon = button.querySelector('.stop-icon');
+
+            if (currentlyPlayingButton === button) {
+                stopCurrentSpeech();
+            } else {
+                stopCurrentSpeech();
+
+                currentUtterance = new SpeechSynthesisUtterance(text);
+                currentUtterance.lang = 'zh-TW';
+                currentUtterance.rate = 0.95;
+
+                currentUtterance.onstart = function() {
+                    buttonText.textContent = '停止播放';
+                    playIcon.classList.add('hidden');
+                    stopIcon.classList.remove('hidden');
+                    currentlyPlayingButton = button;
+                };
+
+                currentUtterance.onend = function() {
+                    stopCurrentSpeech(); 
+                };
+                
+                currentUtterance.onerror = function(event) {
+                    console.error('語音合成錯誤', event);
+                    stopCurrentSpeech(); 
+                };
+
+                speechSynthesis.speak(currentUtterance);
+            }
+        }
+        
+        window.addEventListener('beforeunload', stopCurrentSpeech);
+    </script>
+</body>
+</html>
